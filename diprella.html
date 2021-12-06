@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<style type="text/css">
+	body{
+		margin:0;
+	}
+	section{
+		background:rgba(0,0,0,0.2);
+		height:100vh;
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.card{
+		display: flex;
+		background:white;
+		border-radius: 8px;
+		box-shadow: 2px 2px 8px rgba(0,0,0,0.12);
+		padding:16px;
+		box-sizing: border-box;
+		position: relative;
+	}
+	.form-card{
+		height:600px;
+		width:60vw;
+		overflow: hidden;
+	}
+
+	.backdrop{
+		position: absolute;
+		top:0;
+		left:0;
+		width:50%;
+		height:100%;
+		transition: .3s;
+		background:coral;
+	}
+
+	@keyframes appear{
+		from{
+			opacity: 0;
+		}to{
+			opacity: 1;
+		}
+	}
+
+	@keyframes slideDown{
+		from{
+			transform: translateY(-100%);
+			opacity: 0;
+		}to{
+			transform: translateY(0);
+			opacity: 1;
+		}
+	}
+
+	@keyframes slideLeft{
+		from{
+			transform: translateX(-100%);
+			opacity: 0;
+		}to{
+			transform: translateX(0);
+			opacity: 1;
+		}
+	}
+
+	@keyframes slideRight{
+		from{
+			transform: translateX(100%);
+			opacity: 0;
+		}to{
+			transform: translateX(0);
+			opacity: 1;
+		}
+	}
+
+	.container{
+		width:100%;
+		position: relative;
+		height:100%;
+		display: flex;
+	}
+
+	.container .message, .container .form{
+		width:50%;
+	}
+
+	.login-mode .backdrop{
+		margin-left:0;
+	}
+
+	.sign-up-mode .backdrop{
+		margin-left:50%;
+	}
+
+	.login-mode .login-container{
+		display: none
+	}
+
+
+	.sign-up-mode .sign-up-container{
+		display: none
+	}
+
+	.slide-left{
+		animation:slideLeft .3s ease-in;
+	}
+	.slide-left{
+		animation:slideRight .3s ease-in;
+	}
+</style>
+<body>
+<main>
+	<section>
+		<div class="card form-card login-mode">
+			<div class="backdrop"></div>
+			<div class="container sign-up-container">
+				<div class="login-message message slide-left">
+					Login message
+				</div>
+				<div class="sign-up-form form slide-right">
+					signup form
+				</div>
+			</div>
+			<div class="container login-container">
+				<div class="sign-up-message message slide-left">
+					Sign up message
+				</div>
+				<div class="login-form form slide-right">
+					login form
+				</div>
+			</div>	
+
+
+		</div>
+	</section>
+</main>
+</body>
+<script type="text/javascript">
+	const openDialog =()=>{
+		document.querySelector('.dialog').classList.add('open');
+	}
+
+	const closeDialog=()=>{
+		document.querySelector('.dialog').classList.remove('open');
+	}
+</script>
+</html>

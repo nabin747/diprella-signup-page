@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="form.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <main>
+      <section>
+        <div class="card form-card login-mode">
+          <div class="backdrop"></div>
+          <div class="container sign-up-container">
+            <div class="login-message message slide-left">
+              <div class="welcome">Welcome Back!</div>
+              <div class="welcome-message">
+                to keep connected with us please login with your personal info
+              </div>
+
+              <div class="button" >
+                <button class="btn" onclick="toggleClass()">sign in</button>
+              </div>
+            </div>
+            <div class="sign-up-form form slide-right">
+              <div class="sign-up">
+                  Create Account
+              </div>
+              <div >
+                <ul class="social-icon">
+                  <li><i class="fab fa-facebook-f"></i></li>
+                  <li><i class="fab fa-google-plus-g"></i></li>
+                  <li><i class="fab fa-linkedin-in"></i></li>
+                </ul>
+              </div>
+              <div class="alternative">
+                <p>or use your email account</p>
+              </div>
+              <div class="forms">
+                  <input type="text " placeholder="Name ">
+                <input class="email" type="email" name="Email" id="email" placeholder="Email" />
+      
+                <input
+                  type="password"
+                  name="password"
+                  id="password"
+                  placeholder="Password"
+                />
+              </div>
+              <div class="buttons">
+                <button class="btn sign-up-btn ">sign Up</button>
+              </div>
+            </div>
+          </div>
+          <!-- next container -->
+          <div class="container login-container">
+              <div class="login-form form">
+                <div class="login">
+                    Sign in to Diprella
+                </div>
+                <div >
+                  <ul class="social-icon social-sign-in">
+                    <li><i class="fab fa-facebook-f"></i></li>
+                    <li><i class="fab fa-google-plus-g"></i></li>
+                    <li><i class="fab fa-linkedin-in"></i></li>
+                  </ul>
+                </div>
+                <div class="alternative">
+                  <p>or use your email account</p>
+                </div>
+                <div class="forms">
+                   
+                  <input class="email" type="email" name="Email" id="email" placeholder="Email" />
+        
+                  <input
+                    type="password"
+                    name="password"
+                    id="password"
+                    placeholder="Password"
+                  />
+                </div>
+                <div class="buttons">
+                  <button class="btn sign-up-btn " >sign In</button>
+                </div>
+              </div>
+            <div class="sign-up-message message">
+              <div class="main-message">
+                Hello, Friend
+              </div>
+              <div class="msg-dis">
+                Enter yout personal details and start journey with us 
+              </div>
+              <div class="sign-up-btn">
+                <button type="submit" class="btn" onclick="toggleClass()"> sign up</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+<script>
+    const toggleClass = ()=>{
+        console.log('toggle');
+        document.querySelector('.form-card').classList.toggle('login-mode');
+        document.querySelector('.form-card').classList.toggle('sign-up-mode');
+    
+    }
+</script>
+  </html>
